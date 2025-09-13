@@ -1,0 +1,18 @@
+doctype html 
+html
+  head
+    title Real time web chat
+    link(rel='stylesheet', href='/style.css')
+    script(src='/socket.io/socket.io.js')
+    script(src='/chat.js')
+  body
+    .chat-container
+      .chat-header Real Time Web Chat
+      #content.chat-window
+      form#chat-form.controls
+        | Name:
+        input#name(type="text", placeholder="Enter your name")
+        br
+        | Message:
+        input#field(type="text", placeholder="Type your message...")
+        input#send(type="button", value="Send")
